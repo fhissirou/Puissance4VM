@@ -23,7 +23,7 @@ int main(int k, char ** argv) {
   Coup liste[MaxCoup];
   int nel;
   int etat;
-  test(k,argv);
+
   srand(getpid());
 
   mygrille.kikijoue = J;

@@ -236,9 +236,9 @@ int cfini(Grille * g){
 
 
 void strcfini(int etat){
-  if(etat == Fini) printf("Match nul");
-  else if(etat == J) printf("Le joueur Rouge a gagné !");
-  else if(etat == R) printf("Le joueur Jaune a gagné !");
+  if(etat == Fini) printf("\nMatch nul\n");
+  else if(etat == J) printf("\nLe joueur Rouge a gagné !\n");
+  else if(etat == R) printf("\nLe joueur Jaune a gagné !\n");
 }
 
 

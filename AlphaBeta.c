@@ -87,7 +87,6 @@ int main(int ac, char * av[]){
   for(i = 0; i < nfois; i++){
     val = maxAB(Xloose, Xwin);
   }
-  printf("val = %d\n", val);
   strcfini(val);
   printf("Résultat de l'exploration totale : %d noeuds\n",nexplore);
 
