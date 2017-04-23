@@ -131,8 +131,6 @@ Coup lirecoup(Grille *mygrille, char * line){
 
 
 
-
-
 void jouer(Grille * g, Coup * c){
   assert(g->place[c->ou] == Vide);
   assert(g->kikijoue == c->ki);
@@ -146,7 +144,6 @@ void dejouer(Grille * g, Coup * c){
   g->place[c->ou] = Vide;  
   g->kikijoue = autre(g->kikijoue);
 }
-
 
 
 /************************************* TT4   *******************************************************/
@@ -164,7 +161,10 @@ int cfini(Grille * g){
         // on verifie l'alignement sur du vertical haut vers le bas à partir de la position occurente 
         for(ll = l; ll < M; ll++){
           if (g->place[lc2p(ll, c)] != type) break;
-          else if(nbCaseLigne >= 4) return type; // la partie est finie et il retourne le joueur gagnant
+          else if(nbCaseLigne >= 4){ 
+            if(type == J) return Xwin; // la partie est finie et il retourne le joueur gagnant
+            else return Xloose;
+          }
           else ++nbCaseLigne;
         }
 
@@ -172,7 +172,10 @@ int cfini(Grille * g){
         // on verifie l'alignement du vertical bas vers le haut à partir de la position occurente
         for(ll = l; ll >= 0; ll--){
           if (g->place[lc2p(ll, c)] != type) break;
-          else if(nbCaseLigne >= 4) return type; // la partie est finie et il retourne le joueur gagnant
+          else if(nbCaseLigne >= 4){
+            if(type == J) return Xwin; // la partie est finie et il retourne le joueur gagnant
+            else return Xloose;
+          }
           else ++nbCaseLigne;
         }
 
@@ -180,7 +183,10 @@ int cfini(Grille * g){
         // on verifie l'alignement du horizontal de la gauche vers la droite à partir de la position occurente
         for(cc = c; cc < N; cc++){
           if (g->place[lc2p(l, cc)] != type) break;
-          else if(nbCaseLigne >= 4) return type; // la partie est finie et il retourne le joueur gagnant
+          else if(nbCaseLigne >= 4){
+            if(type == J) return Xwin; // la partie est finie et il retourne le joueur gagnant
+            else return Xloose;
+          }
           else ++nbCaseLigne;
         }
 
@@ -188,7 +194,10 @@ int cfini(Grille * g){
         // on verifie l'alignement du horizontal de la droite vers la gauche à partir de la position occurente
         for(cc = c; cc >= 0; cc--){
           if (g->place[lc2p(l, cc)] != type) break;
-          else if(nbCaseLigne >= 4) return type; // la partie est finie et il retourne le joueur gagnant
+          else if(nbCaseLigne >= 4){
+            if(type == J) return Xwin; // la partie est finie et il retourne le joueur gagnant
+            else return Xloose;
+          }
           else ++nbCaseLigne;
         }
 
@@ -196,7 +205,10 @@ int cfini(Grille * g){
         // On verifie l'alignement sur la diagonale haut-gauche
         for(cc = c, ll= l; cc >= 0 && ll >= 0; cc--, ll--){
           if (g->place[lc2p(ll, cc)] != type) break;
-          else if(nbCaseLigne >= 4) return type; // la partie est finie et il retourne le joueur gagnant
+          else if(nbCaseLigne >= 4){ 
+            if(type == J) return Xwin; // la partie est finie et il retourne le joueur gagnant
+            else return Xloose;
+          }
           else nbCaseLigne++;
         }
 
@@ -204,7 +216,10 @@ int cfini(Grille * g){
         // On verifie l'alignement sur la diagonale haut-droite
         for(cc = c, ll= l; cc < N && ll >= 0; cc++, ll--){
           if (g->place[lc2p(ll, cc)] != type) break;
-          else if(nbCaseLigne >= 4) return type; // la partie est finie et il retourne le joueur gagnant
+          else if(nbCaseLigne >= 4){
+            if(type == J) return Xwin; // la partie est finie et il retourne le joueur gagnant
+            else return Xloose;
+          }
           else ++nbCaseLigne;
         }
 
@@ -212,7 +227,10 @@ int cfini(Grille * g){
         // On verifi l'alignement sur la diagonale bas-droite
         for(cc = c, ll= l; cc < N && ll < M; cc++, ll++){
           if (g->place[lc2p(ll, cc)] != type) break;
-          else if(nbCaseLigne >= 4) return type; // la partie est finie et il retourne le joueur gagnant
+          else if(nbCaseLigne >= 4){
+            if(type == J) return Xwin; // la partie est finie et il retourne le joueur gagnant
+            else return Xloose;
+          }
           else ++nbCaseLigne;
         }
 
@@ -220,7 +238,10 @@ int cfini(Grille * g){
         // On verifi l'alignement sur la diagonale bas-gauche
         for(cc = c, ll= l; cc >= 0 && ll < M; cc--, ll++){
           if (g->place[lc2p(ll, cc)] != type) break;
-          else if(nbCaseLigne >= 4) return type; // la partie est finie et il retourne le joueur gagnant
+          else if(nbCaseLigne >= 4){ 
+            if(type == J) return Xwin; // la partie est finie et il retourne le joueur gagnant
+            else return Xloose;
+          }
           else ++nbCaseLigne;
         }       
       }
@@ -229,16 +250,16 @@ int cfini(Grille * g){
 
   // pas de gagnant ; reste-t-il un coup à jouer ?
   for(int cc = 0; cc < N; cc++)
-    if (g->place[lc2p(l, cc)] == Vide) return 0; // ce n'est pas fini car il ya une case vide
+    if (g->place[lc2p(l, cc)] == Vide) return PasFini; // ce n'est pas fini car il ya une case vide
 
-  return Fini; // partie est terminer pas de gagnant
+  return Nul; // partie est terminer pas de gagnant
 }
 
 
 void strcfini(int etat){
-  if(etat == Fini) printf("\nMatch nul\n");
-  else if(etat == J) printf("\nLe joueur Rouge a gagné !\n");
-  else if(etat == R) printf("\nLe joueur Jaune a gagné !\n");
+  if(etat == Nul) printf("\nMatch nul\n");
+  else if(etat == Xwin) printf("\nLe joueur Rouge a gagné !\n");
+  else if(etat == Xloose) printf("\nLe joueur Jaune a gagné !\n");
 }
 
 
@@ -255,6 +276,7 @@ int mkcoup(Grille * g, Coup c[]){
       i = lc2p(ligne, col) ; 
       c[icoup].ou = i;
       c[icoup].ki = g->kikijoue;
+
       icoup += 1; 
       }
     }
@@ -281,6 +303,28 @@ int test(int k, char ** argv) {
 
 
 
+void fichiergrille(Grille * g, char * filename){
+  FILE * fd = fopen(filename, "r");
+  if (fd == NULL){
+    perror(filename);
+    exit(1);
+  }
+  liregrille(g, fd);
+  fclose(fd);
+}
 
 
+Coup coupAleatoire(Grille *g){
+  Coup liste[MaxCoup];
+  int n;
+  int val;
+  Coup c;
 
+  n = mkcoup(g, liste);
+
+  // la liste des coups trouvés a été affichée : posiions sur la grille entre 0 et 41
+  val = rand()%n;
+  printf("valleur %d et le n= %d\n", val, n);
+  c = liste[val];
+  return c;
+}

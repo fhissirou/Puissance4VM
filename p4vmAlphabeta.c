@@ -16,7 +16,7 @@
 int nexplore;
 Grille mygrille;
 
-int maxAB(int alpha, int beta){
+int maxAB_simple(int alpha, int beta){
   Coup liste[MaxCoup];
   int nel;
   int i, t;
@@ -24,14 +24,14 @@ int maxAB(int alpha, int beta){
   nexplore += 1;
 
   t = cfini(&mygrille);
-  if (t != 0)
+  if (t != PasFini)
     return t;
 
   nel = mkcoup(&mygrille, liste);
   for(i = 0; i < nel; i++){
     jouer(&mygrille, &liste[i]);
-    t = minAB(alpha, beta);
-    assert(t != 0);
+    t = minAB_simple(alpha, beta);
+    assert(t != PasFini);
     dejouer(&mygrille, &liste[i]);
 
     if (t > alpha)
@@ -43,7 +43,7 @@ int maxAB(int alpha, int beta){
   return alpha;
 }
 
-int minAB(int alpha, int beta){
+int minAB_simple(int alpha, int beta){
   Coup liste[MaxCoup];
   int nel;
   int i, t;
@@ -51,14 +51,14 @@ int minAB(int alpha, int beta){
   nexplore += 1;
 
   t = cfini(&mygrille);
-  if (t != 0)
+  if (t != PasFini)
     return t;
 
   nel = mkcoup(&mygrille, liste);
   for(i = 0; i < nel; i++){
     jouer(&mygrille, &liste[i]);
-    t = maxAB(alpha, beta);
-    assert(t != 0);
+    t = maxAB_simple(alpha, beta);
+    assert(t != PasFini);
     dejouer(&mygrille, &liste[i]);
 
     if (t < beta)
@@ -71,21 +71,17 @@ int minAB(int alpha, int beta){
 
 
 int main(int ac, char * av[]){
-  int val = Fini;
+  int val;
   int i;
   int nfois = 1; // une exploration par défaut
 
   if (ac > 1)
     nfois = strtol(av[1], NULL, 0);
-  //mygrille.kikijoue = J;
-
-  //Grille mygrille;
   liregrille(&mygrille, stdin);
   printf("%s", strgrille(&mygrille));
 
-    //printf("%s", strgrille(&mygrille));
   for(i = 0; i < nfois; i++){
-    val = maxAB(Xloose, Xwin);
+    val = maxAB_simple(Xloose, Xwin);
   }
   strcfini(val);
   printf("Résultat de l'exploration totale : %d noeuds\n",nexplore);

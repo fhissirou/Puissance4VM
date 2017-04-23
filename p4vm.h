@@ -6,7 +6,7 @@
 # include <string.h>
 # include <stdlib.h>
 # include <unistd.h>
-
+# include <time.h>
 
 enum {
   R = 1, J = 2,			// joueurs (Rouge et Jaune) et marques
@@ -15,7 +15,7 @@ enum {
   N = 7,			// taille du damier : N nombre de colonne, M nombre de rangées
   M = 6,
   Xwin = 1, Xloose = -1, Nul = 0, // résultats
-  Fini = -1,
+  PasFini = 2,
 
   Rate = -1,			// case invalide
 
@@ -114,9 +114,16 @@ int test(int k, char ** argv);
 int mkcoup(Grille * g, Coup c[]) ; 
 void strcfini(int val) ; 
 int cfini(Grille * g) ; 
+void fichiergrille(Grille * g, char * filename);
+Coup coupAleatoire(Grille *g);
 
+int maxAB_simple(int alpha, int beta);
+int minAB_simple(int alpha, int beta);
 
-int maxAB(int alpha, int beta);
-int minAB(int alpha, int beta);
+int maxAB_profondeur(int alpha, int beta, int flag, int prof);
+int minAB_profondeur(int alpha, int beta, int flag, int prof);
 
+Coup ab_alphabeta(Grille * g);
+int max();
+int min();
 #endif
