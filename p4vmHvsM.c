@@ -1,11 +1,12 @@
 /* 
  * Roxane Desrousseaux
  * Fodé Hissirou
- * 26 Mars 2017
+ * 24 Avril 2017
  * Simulation de jeu puissance 4 version misère avec l'ordinateur
+ * Permet de jouer contre un joueur parfait
  * On lance programme avec 
  * make
- * ./play
+ * ./playHvsM
  * Exemples de coups : 
  * j j en 0
  * j j en 6
