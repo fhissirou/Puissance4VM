@@ -126,4 +126,8 @@ int minAB_profondeur(int alpha, int beta, int flag, int prof);
 Coup ab_alphabeta(Grille * g);
 int max();
 int min();
+
+
+int playout(Grille * g);
+Coup MC(Grille * g, int nplayout);
 #endif

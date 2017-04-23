@@ -28,7 +28,7 @@ int max(){
 
   tmp = cfini(&mygrille);
   if (tmp != PasFini)
-    return Xloose;
+    return tmp;
 
   nel = mkcoup(&mygrille, liste);
   for(i = 0; i < nel; i++){
@@ -54,8 +54,9 @@ int min(){
   nexplore += 1;
 
   tmp = cfini(&mygrille);
-  if (tmp != PasFini)
-    return Xwin;
+  if (tmp != PasFini){
+    return tmp;
+  }
 
   nel = mkcoup(&mygrille, liste);
   for(i = 0; i < nel; i++){
