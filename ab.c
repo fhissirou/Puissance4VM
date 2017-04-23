@@ -3,8 +3,8 @@
  * Fodé Hissirou
  * 24 Avril 2017
  * Simulation de jeu puissance 4 version misère avec l'ordinateur
- * ab.c
- * Utilisé par p4vmHvsM.c pour trouver un "bon coup"
+ * Fonctions pour la recherche de bons coups avec alphabeta (profondeur limitée)
+ * Utilisé par p4vmHvsM.c et p4vm_MC_vs_AB.c
 */
 
 #include "p4vm.h"
