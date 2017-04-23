@@ -1,14 +1,10 @@
 /* 
  * Roxane Desrousseaux
  * Fodé Hissirou
- * 26 Mars 2017
+ * 24 Avril 2017
  * Simulation de jeu puissance 4 version misère avec l'ordinateur
- * On lance programme avec 
- * make
- * ./play
- * Exemples de coups : 
- * j j en 0
- * j j en 6
+ * ab.c
+ * Utilisé par p4vmHvsM.c pour trouver un "bon coup"
 */
 
 #include "p4vm.h"
