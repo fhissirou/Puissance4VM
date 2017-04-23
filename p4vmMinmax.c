@@ -1,14 +1,12 @@
 /* 
  * Roxane Desrousseaux
  * Fodé Hissirou
- * 26 Mars 2017
+ * 24 Avril 2017
  * Simulation de jeu puissance 4 version misère avec l'ordinateur
+ * Permet d'envoyer un damier en entrée et retourne le joueur qui a la position gagnante avec minmax
  * On lance programme avec 
  * make
- * ./play
- * Exemples de coups : 
- * j j en 0
- * j j en 6
+ * ./play_minmax < nom_damier
 */
 
 #include "p4vm.h"
