@@ -39,12 +39,12 @@ Exemples de commandes :
 * ./play_mc 10     (l'argument indique le nombre de playout)
 * ./play_ms_vs_ab
 
-Les exécutables ./play_aleatoire,  ./play_HvsM et ./play_mc permettent de jouer tout à tour contre l'ordinateur.
-Dans le premier cas l'ordinateur calcule la liste des coups possibles et en joue un aléatoirement.
-Dans le deuxième cas, l'ordinateur joue comme un "joueur parfait", alphabeta avec profondeur limitée est appliquée pour chercher le meilleur coup possible.
-Dans le troisième cas, l'ordinateur joue en jouant un coup trouvé par la méthode de Monte Carlo. 
+Les exécutables ./play_aleatoire,  ./play_HvsM et ./play_mc permettent de jouer tout à tour contre l'ordinateur.  <br>
+Dans le premier cas l'ordinateur calcule la liste des coups possibles et en joue un aléatoirement. <br>
+Dans le deuxième cas, l'ordinateur joue comme un "joueur parfait", alphabeta avec profondeur limitée est appliquée pour chercher le meilleur coup possible. <br>
+Dans le troisième cas, l'ordinateur joue en jouant un coup trouvé par la méthode de Monte Carlo.  <br>
 
-Les exécutables ./play_minmax , ./play_alphabeta prennent en entrée un damier et renvoie le joueur qui possède la position gagnante.
+Les exécutables ./play_minmax , ./play_alphabeta prennent en entrée un damier et renvoie le joueur qui possède la position gagnante. <br>
 
 
 
@@ -53,7 +53,7 @@ Les exécutables ./play_minmax , ./play_alphabeta prennent en entrée un damier 
 Exemples de résultats attendus :
 -----------------------------------------------------
 
- * ./play_minmax < damiers/damier1
+ * ./play_minmax < damiers/damier1 <br>
  r . . j r . .  <br>
  r . . j r j j   <br>
  j . r j r j r  <br>
@@ -66,7 +66,7 @@ Le joueur Jaune gagne !
 Résultat de l'exploration totale : 927 noeuds
 
 Pour le même damier : 
-* ./play_alphabeta < damiers/damier1
+* ./play_alphabeta < damiers/damier1  <br>
  r . . j r . . <br>
  r . . j r j j <br>
  j . r j r j r <br>
@@ -79,14 +79,14 @@ Le joueur Jaune gagne !
 Résultat de l'exploration totale : 23 noeuds
 
 
-* ./play_minmax < damiers/damier2
- . . . j r . .
- r . . j r j j
- j . r j r j r
- j . j r j r r
- r . r r r j j
- r j j j r j r
-j joue
+* ./play_minmax < damiers/damier2 <br>
+ . . . j r . . <br>
+ r . . j r j j <br> 
+ j . r j r j r <br>
+ j . j r j r r <br>
+ r . r r r j j <br>
+ r j j j r j r <br>
+j joue <br>
 
 Le joueur Rouge gagne!
 Résultat de l'exploration totale : 10658 noeuds
@@ -94,14 +94,14 @@ Résultat de l'exploration totale : 10658 noeuds
 
 
 Une exploration énorme que minmax ne sait pas résoudre
-* ./play_alphabeta < damiers/damier7
- . . . . . . j
- . . . . . . r
- . . . r . j r
- . . . r j r r
- r j . j j r j
- j r r j j j r
-j joue
+* ./play_alphabeta < damiers/damier7 <br>
+ . . . . . . j <br>
+ . . . . . . r <br>
+ . . . r . j r <br> 
+ . . . r j r r <br>
+ r j . j j r j <br>
+ j r r j j j r <br>
+j joue <br>
 
 
 Le joueur Rouge gagne!
