@@ -1,18 +1,18 @@
 /* 
  * Roxane Desrousseaux
  * Fodé Hissirou
- * 26 Mars 2017
+ * 24 Avril 2017
  * Simulation de jeu puissance 4 version misère avec l'ordinateur
+ * Jeu contre l'ordinateur qui joue de manière aléatoire
  * On lance programme avec 
  * make
- * ./play
+ * ./play_aleatoire
  * Exemples de coups : 
  * j j en 0
  * j j en 6
 */
 
 #include "p4vm.h"
-
 
 
 int main(int k, char ** argv) {      
