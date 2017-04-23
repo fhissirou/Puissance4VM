@@ -1,13 +1,16 @@
 PUISSANCE4 VERSION MISÈRE 
+---------------------------------------------------------
 
 ------------------------------
 |   Roxane Desrousseaux      |
+---------------------------------------------------------
 |          &                 |
 |   Fodé Hissirou            |
 ------------------------------
 
 
 Règle du Jeu Puissance4 version Misère:
+---------------------------------------------------------
 
 Dans la version misère de puissance4, le joueur perdant est celui qui réalise en premier un alignement (vertical,horizontal,diagonal) d'au moins quatre pions de sa couleur. 
 Si toutes les cases de la grille de jeu sont remplies et qu'aucun des deux joueurs n'a réalisé un tel alignement, la partie est déclarée nulle. 
@@ -16,6 +19,7 @@ Le pion coulisse jusqu'à la position la plus basse possible dans la dite colonn
 
 
 Compilation:
+---------------------------------------------------------
 make
 
 La commande renvoie le message suivant (six exécutables suivant sont générés):
@@ -28,6 +32,7 @@ g++ -Wall -g p4vmLib.c mc.c p4vmMC.c -o play_mc
 g++ -Wall -g p4vmLib.c mc.c p4vm_MC_vs_AB.c ab.c -o play_mc_vs_ab
 
 Exemples de commandes : 
+---------------------------------------------------------
 ./play_alphabeta < damiers/damier2
 ./play_minmax < damiers/damier2
 ./play_HvsM
@@ -46,21 +51,13 @@ Les exécutables ./play_minmax , ./play_alphabeta prennent en entrée un damier 
 
 
 Exemples de résultats attendus :
--------------------------------------------------------
- ./play_minmax < damiers/damier1
- r . . j r . .
- r . . j r j j
- j . r j r j r
- j . j r j r r
- r . r r r j j
- r j j j r j r
-r joue
-
-Le joueur Jaune gagne !
-Résultat de l'exploration totale : 927 noeuds
 ---------------------------------------------------------
+
+Résultat de l'exploration totale : 927 noeuds
+
 Pour le même damier : 
 ./play_alphabeta < damiers/damier1
+---------------------------------------------------------
  r . . j r . .
  r . . j r j j
  j . r j r j r
@@ -71,9 +68,10 @@ r joue
 
 Le joueur Jaune gagne !
 Résultat de l'exploration totale : 23 noeuds
--------------------------------------------------------
+
 
 ./play_minmax < damiers/damier2
+---------------------------------------------------------
  . . . j r . .
  r . . j r j j
  j . r j r j r
@@ -86,9 +84,10 @@ Le joueur Rouge gagne!
 Résultat de l'exploration totale : 10658 noeuds
 
 
------------------------------------------------------
+
 Une exploration énorme que minmax ne sait pas résoudre
 ./play_alphabeta < damiers/damier7
+---------------------------------------------------------
  . . . . . . j
  . . . . . . r
  . . . r . j r
