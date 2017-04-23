@@ -12,7 +12,7 @@
 */
 
 #include "p4vm.h"
-/*
+
 int playout(Grille * g){
   int t;
   Coup liste[MaxCoup];
@@ -55,55 +55,4 @@ Coup MC(Grille * g, int nplayout){
       imax = i;
 
   return liste[imax];
-}
-*/
-/*
- Test : combien de playouts par secondes ?
-*/
-int main(int ac, char * av[]){
-  Grille mygrille = {Vide};
-  char * line;
-  Coup c;
-  int nplayout;
-  mygrille.kikijoue = J;
-
-  if (ac != 2){
-    fprintf(stderr, "usage: %s nombre-de-playouts\n", av[0]);
-    return 1;
-  }
-  nplayout = strtol(av[1], NULL, 0);
-
-  for(;;){
-    printf("%s", strgrille(&mygrille));
-
-    /* faire jouer l'humain */
-    printf("entrer un coup ");
-    line = xgetline(stdin);
-
-
-  re:
-    c = lirecoup(&mygrille,line+1);
-    if (c.ou == Rate){
-      printf("mauvais coup, recommencer\n");
-      goto re;
-    }
-
-    printf("coup lu %s\n", strcoup(&c));
-    jouer(&mygrille, &c);
-
-    if (cfini(&mygrille) != PasFini)
-      break;
-
-    /* explorer au hasard */
-    c = MC(&mygrille, nplayout);
-    printf("la machine joue %s\n", strcoup(&c));
-    jouer(&mygrille, &c);
-
-    if (cfini(&mygrille) != PasFini)
-      break;
-  }
-
-  strcfini(cfini(&mygrille));
-
-  return 0;
 }

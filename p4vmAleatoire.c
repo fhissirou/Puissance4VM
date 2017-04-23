@@ -66,7 +66,7 @@ int main(int k, char ** argv) {
     printf("la machine joue %s\n", strcoup(&c));
     jouer(&mygrille, &c);
 
-    if((etat = cfini(&mygrille)) != 0){
+    if((etat = cfini(&mygrille)) != PasFini){
         printf("val === %d\n", etat);
       strcfini(etat);
       break;
