@@ -1,18 +1,12 @@
 /* 
- * Roxane Desrousseaux
  * Fodé Hissirou
- * 26 Mars 2017
+ * Roxane Desrousseaux
+ * 24 Avril 2017
  * Simulation de jeu puissance 4 version misère avec l'ordinateur
- * On lance programme avec 
- * make
- * ./play
- * Exemples de coups : 
- * j j en 0
- * j j en 6
+ * Librairie de fonctions
 */
 
 #include "p4vm.h"
-
 
 
 char * strgrille(Grille * g){
@@ -258,8 +252,8 @@ int cfini(Grille * g){
 
 void strcfini(int etat){
   if(etat == Nul) printf("\nMatch nul\n");
-  else if(etat == Xwin) printf("\nLe joueur Rouge a gagné !\n");
-  else if(etat == Xloose) printf("\nLe joueur Jaune a gagné !\n");
+  else if(etat == Xwin) printf("\nLe joueur Rouge gagne !\n");
+  else if(etat == Xloose) printf("\nLe joueur Jaune gagne !\n");
 }
 
 
