@@ -24,20 +24,20 @@ make
 La commande renvoie le message suivant (six exécutables suivant sont générés):  <br>
 
 g++ -Wall -g p4vmLib.c p4vmAleatoire.c -o play_aleatoire <br>
-g++ -Wall -g p4vmLib.c p4vmHvsM.c ab.c -o play_HvsM
-g++ -Wall -g p4vmLib.c p4vmAlphabeta.c -o play_alphabeta
-g++ -Wall -g p4vmLib.c p4vmMinmax.c -o play_minmax
-g++ -Wall -g p4vmLib.c mc.c p4vmMC.c -o play_mc
-g++ -Wall -g p4vmLib.c mc.c p4vm_MC_vs_AB.c ab.c -o play_mc_vs_ab
+g++ -Wall -g p4vmLib.c p4vmHvsM.c ab.c -o play_HvsM  <br>
+g++ -Wall -g p4vmLib.c p4vmAlphabeta.c -o play_alphabeta  <br>
+g++ -Wall -g p4vmLib.c p4vmMinmax.c -o play_minmax  <br>
+g++ -Wall -g p4vmLib.c mc.c p4vmMC.c -o play_mc  <br>
+g++ -Wall -g p4vmLib.c mc.c p4vm_MC_vs_AB.c ab.c -o play_mc_vs_ab  <br>
 
 Exemples de commandes : 
 ---------------------------------------------------------
-./play_alphabeta < damiers/damier2
-./play_minmax < damiers/damier2
-./play_HvsM
-./play_Aleatoire
-./play_mc 10     (l'argument indique le nombre de playout)
-./play_ms_vs_ab
+* ./play_alphabeta < damiers/damier2  <
+* ./play_minmax < damiers/damier2
+* ./play_HvsM
+* ./play_Aleatoire
+* ./play_mc 10     (l'argument indique le nombre de playout)
+* ./play_ms_vs_ab
 
 Les exécutables ./play_aleatoire,  ./play_HvsM et ./play_mc permettent de jouer tout à tour contre l'ordinateur.
 Dans le premier cas l'ordinateur calcule la liste des coups possibles et en joue un aléatoirement.
@@ -54,26 +54,26 @@ Exemples de résultats attendus :
 -----------------------------------------------------
 
  * ./play_minmax < damiers/damier1
- r . . j r . .
- r . . j r j j
- j . r j r j r
- j . j r j r r
- r . r r r j j
- r j j j r j r
-r joue
+ r . . j r . .  <br>
+ r . . j r j j   <br>
+ j . r j r j r  <br>
+ j . j r j r r  <br>
+ r . r r r j j <br>
+ r j j j r j r <br>
+r joue <br>
 
 Le joueur Jaune gagne !
 Résultat de l'exploration totale : 927 noeuds
 
 Pour le même damier : 
 * ./play_alphabeta < damiers/damier1
- r . . j r . .
- r . . j r j j
- j . r j r j r
- j . j r j r r
- r . r r r j j
- r j j j r j r
-r joue
+ r . . j r . . <br>
+ r . . j r j j <br>
+ j . r j r j r <br>
+ j . j r j r r <br>
+ r . r r r j j <br> 
+ r j j j r j r <br>
+r joue <br>
 
 Le joueur Jaune gagne !
 Résultat de l'exploration totale : 23 noeuds
