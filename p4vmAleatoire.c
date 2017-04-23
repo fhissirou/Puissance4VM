@@ -48,7 +48,7 @@ int main(int k, char ** argv) {
     printf("coup lu %s\n", strcoup(&c));  
     jouer(&mygrille, &c);
 
-    if((etat = cfini(&mygrille)) != 0){
+    if((etat = cfini(&mygrille)) != PasFini){
       strcfini(etat);
       break;
     }
