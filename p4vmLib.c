@@ -243,10 +243,14 @@ int cfini(Grille * g){
   }
 
   // pas de gagnant ; reste-t-il un coup à jouer ?
-  for(int cc = 0; cc < N; cc++)
-    if (g->place[lc2p(l, cc)] == Vide) return PasFini; // ce n'est pas fini car il ya une case vide
-
-  return Nul; // partie est terminer pas de gagnant
+  for(l = 0; l < M; l++){
+    for(int cc = 0; cc < N; cc++) {
+        if (g->place[lc2p(l, cc)] == Vide) {   return PasFini; // ce n'est pas fini car il ya une case vide
+        }
+    }
+  }
+ 
+ return Nul; // partie est terminer pas de gagnant
 }
 
 
