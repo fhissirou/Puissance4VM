@@ -41,6 +41,8 @@ Dans le deuxième cas, l'ordinateur joue comme un "joueur parfait", alphabeta av
 Dans le troisième cas, l'ordinateur joue en jouant un coup trouvé par la méthode de Monte Carlo. 
 
 Les exécutables ./play_minmax , ./play_alphabeta prennent en entrée un damier et renvoie le joueur qui possède la position gagnante.
+L'exécutable ./play_mc_vs_ab [nbplayout] simule 200 parties de jeu entre un joueur parfait et un joueur monte carlo. Un score de -190 indique que le joueur monte carlo a gagné (200 - 190) = 10 parties.
+
 
 
 
@@ -100,4 +102,17 @@ j joue
 
 Le joueur Rouge gagne!
 Résultat de l'exploration totale : 11586708 noeuds
+
+
+----------------------------------------------------
+$ ./play_mc_vs_ab 200
+ . . . . . . .
+ . . . . . . .
+ . . . . . . .
+ . . . . . . .
+ . . . . . . .
+ . . . . . . .
+j joue
+200 playouts: score -108
+
 
