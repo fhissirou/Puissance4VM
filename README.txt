@@ -41,7 +41,9 @@ Dans le deuxième cas, l'ordinateur joue comme un "joueur parfait", alphabeta av
 Dans le troisième cas, l'ordinateur joue en jouant un coup trouvé par la méthode de Monte Carlo. 
 
 Les exécutables ./play_minmax , ./play_alphabeta prennent en entrée un damier et renvoie le joueur qui possède la position gagnante.
-L'exécutable ./play_mc_vs_ab [nbplayout] simule 200 parties de jeu entre un joueur parfait et un joueur monte carlo. Un score de -190 indique que le joueur monte carlo a gagné (200 - 190) = 10 parties.
+
+L'exécutable ./play_mc_vs_ab [nbplayout] simule 200 parties de jeu entre un joueur parfait et un joueur monte carlo. 
+Un score de -190 indique que le joueur monte carlo a gagné (200 - 190) = 10 parties.
 
 
 
@@ -60,6 +62,8 @@ r joue
 
 Le joueur Jaune gagne !
 Résultat de l'exploration totale : 927 noeuds
+Ici le damier envoyé indiquait que rouge devait jouer mais minmax a trouvé que jaune avait une solution gagnante.
+
 ---------------------------------------------------------
 Pour le même damier : 
 ./play_alphabeta < damiers/damier1
@@ -73,6 +77,8 @@ r joue
 
 Le joueur Jaune gagne !
 Résultat de l'exploration totale : 23 noeuds
+Ici le damier envoyé indiquait que rouge devait jouer mais alphabeta a trouvé que jaune avait une solution gagnante.
+
 -------------------------------------------------------
 
 ./play_minmax < damiers/damier2
@@ -102,6 +108,24 @@ j joue
 
 Le joueur Rouge gagne!
 Résultat de l'exploration totale : 11586708 noeuds
+
+
+----------------------------------------------------
+
+Un exemple sur un match nul : 
+
+./play_alphabeta < damiers/damier9<br>
+* r r . j . . .
+* j j r r . . .
+* r r j j . . .
+* j j r r . . .
+* r r j j r j .
+* j j r j r j r
+j joue<br>
+
+Match nul
+Résultat de l'exploration totale : 3373 noeuds
+
 
 
 ----------------------------------------------------
