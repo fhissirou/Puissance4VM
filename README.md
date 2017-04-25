@@ -66,6 +66,7 @@ r joue <br>
 
 Le joueur Jaune gagne !
 Résultat de l'exploration totale : 927 noeuds
+Ici le damier envoyé indiquait que rouge devait jouer mais minmax a trouvé que jaune avait une solution gagnante.
 
 Pour le même damier : 
 * ./play_alphabeta < damiers/damier1  <br>
@@ -79,6 +80,7 @@ r joue <br>
 
 Le joueur Jaune gagne !
 Résultat de l'exploration totale : 23 noeuds
+Ici le damier envoyé indiquait que rouge devait jouer mais alphabeta a trouvé que jaune avait une solution gagnante. <br>
 
 
 * ./play_minmax < damiers/damier2 <br>
@@ -92,6 +94,7 @@ j joue <br>
 
 Le joueur Rouge gagne!
 Résultat de l'exploration totale : 10658 noeuds
+Ici le damier envoyé indiquait que jaune devait jouer mais alphabeta a trouvé que rouge avait une solution gagnante. <br>
 
 
 
@@ -110,9 +113,24 @@ Le joueur Rouge gagne!
 Résultat de l'exploration totale : 11586708 noeuds
 
 
+Un exemple sur un match nul : 
+
+./play_alphabeta < damiers/damier9<br>
+* r r . j . . .
+* j j r r . . .
+* r r j j . . .
+* j j r r . . .
+* r r j j r j .
+* j j r j r j r
+j joue<br>
+
+Match nul
+Résultat de l'exploration totale : 3373 noeuds
+
+
 
 Une simulation entre joueur parfait et mc
-*$ ./play_mc_vs_ab 200<br>
+* ./play_mc_vs_ab 200<br>
 * . . . . . . .
 * . . . . . . .
 * . . . . . . .
