@@ -41,9 +41,51 @@ typedef struct Grille Grille;
 typedef struct Coup Coup ; 
 
 
-static inline int lc2p(int l, int c){ return l * N + c; }
 
-/**** TT2 ***********/
+
+/****** PROTOTYPES DES FONCTIONS ***********/
+
+
+char * strgrille(Grille * g) ; 
+static inline int lc2p(int l, int c) ; 
+
+
+void liregrille(Grille * g, FILE * fd) ; 
+static inline int mot2val(char * mot) ;
+static inline char * xgetline(FILE * oulire) ; 
+
+
+char * strcoup(Coup * coup) ; 
+Coup lirecoup(Grille *mygrille, char * line) ; 
+static inline int autre(int ki) ; 
+void jouer(Grille * g, Coup * c) ; 
+void dejouer(Grille * g, Coup * c) ;
+
+int test(int k, char ** argv);
+int mkcoup(Grille * g, Coup c[]) ; 
+void strcfini(int val) ; 
+int cfini(Grille * g) ; 
+void fichiergrille(Grille * g, char * filename);
+Coup coupAleatoire(Grille *g);
+
+int maxAB_simple(int alpha, int beta);
+int minAB_simple(int alpha, int beta);
+
+int maxAB_profondeur(int alpha, int beta, int flag, int prof);
+int minAB_profondeur(int alpha, int beta, int flag, int prof);
+
+Coup ab_alphabeta(Grille * g);
+int max();
+int min();
+
+
+int playout(Grille * g);
+Coup MC(Grille * g, int nplayout);
+
+
+/**** Static functions ***********/
+
+static inline int lc2p(int l, int c){ return l * N + c; }
 
 /* xgetline  --  comme getline mais ligne neuve et EOF = erreur */
 static inline char * xgetline(FILE * oulire){
@@ -89,45 +131,4 @@ mot2val(char * mot){
   fprintf(stderr, "caractere %c pas compris\n", mot[0]);
   exit(1);
 }
-
-
-
-/****** PROTOTYPES DES FONCTIONS ***********/
-
-
-char * strgrille(Grille * g) ; 
-//static inline int lc2p(int l, int c) ; 
-
-
-void liregrille(Grille * g, FILE * fd) ; 
-//static inline int mot2val(char * mot) ;
-//static inline char * xgetline(FILE * oulire) ; 
-
-
-char * strcoup(Coup * coup) ; 
-Coup lirecoup(Grille *mygrille, char * line) ; 
-//static inline int autre(int ki) ; 
-void jouer(Grille * g, Coup * c) ; 
-void dejouer(Grille * g, Coup * c) ;
-
-int test(int k, char ** argv);
-int mkcoup(Grille * g, Coup c[]) ; 
-void strcfini(int val) ; 
-int cfini(Grille * g) ; 
-void fichiergrille(Grille * g, char * filename);
-Coup coupAleatoire(Grille *g);
-
-int maxAB_simple(int alpha, int beta);
-int minAB_simple(int alpha, int beta);
-
-int maxAB_profondeur(int alpha, int beta, int flag, int prof);
-int minAB_profondeur(int alpha, int beta, int flag, int prof);
-
-Coup ab_alphabeta(Grille * g);
-int max();
-int min();
-
-
-int playout(Grille * g);
-Coup MC(Grille * g, int nplayout);
 #endif
