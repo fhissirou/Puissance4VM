@@ -2,8 +2,8 @@
  * Roxane Desrousseaux
  * Fodé Hissirou
  * 24 Avril 2017
- * Simulation de jeu puissance 4 version misère avec l'ordinateur
  * Simulation entre un joueur parfait et un joueur montecarlo
+ * ./play_mc_vs_ab
 */
 
 #include "p4vm.h"
