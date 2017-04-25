@@ -140,3 +140,201 @@ j joue
 200 playouts: score -108
 
 
+----------------------------------------------------
+Un exemple de déroulement de jeu contre mc ( le principe est le même avec ./play_aleatoire et ./play_HvsM, il n'y a que la stratégie de jeu de l'ordinateur qui change)
+
+$ ./play_mc 100
+ . . . . . . .
+ . . . . . . .
+ . . . . . . .
+ . . . . . . .
+ . . . . . . .
+ . . . . . . .
+j joue
+entrer un coup j j en 0
+coup lu j en 0,5
+la machine joue r en 2,5
+ . . . . . . .
+ . . . . . . .
+ . . . . . . .
+ . . . . . . .
+ . . . . . . .
+ j . r . . . .
+j joue
+entrer un coup j j en 6
+coup lu j en 6,5
+la machine joue r en 1,5
+ . . . . . . .
+ . . . . . . .
+ . . . . . . .
+ . . . . . . .
+ . . . . . . .
+ j r r . . . j
+j joue
+entrer un coup j j en 5
+coup lu j en 5,5
+la machine joue r en 0,4
+ . . . . . . .
+ . . . . . . .
+ . . . . . . .
+ . . . . . . .
+ r . . . . . .
+ j r r . . j j
+j joue
+entrer un coup j j en 4
+coup lu j en 4,5
+la machine joue r en 0,3
+ . . . . . . .
+ . . . . . . .
+ . . . . . . .
+ r . . . . . .
+ r . . . . . .
+ j r r . j j j
+j joue
+entrer un coup j j en 6
+coup lu j en 6,4
+la machine joue r en 5,4
+ . . . . . . .
+ . . . . . . .
+ . . . . . . .
+ r . . . . . .
+ r . . . . r j
+ j r r . j j j
+j joue
+entrer un coup j j en 5
+coup lu j en 5,3
+la machine joue r en 5,2
+ . . . . . . .
+ . . . . . . .
+ . . . . . r .
+ r . . . . j .
+ r . . . . r j
+ j r r . j j j
+j joue
+entrer un coup j j en 5
+coup lu j en 5,1
+la machine joue r en 5,0
+ . . . . . r .
+ . . . . . j .
+ . . . . . r .
+ r . . . . j .
+ r . . . . r j
+ j r r . j j j
+j joue
+entrer un coup j j en 0
+coup lu j en 0,2
+la machine joue r en 0,1
+ . . . . . r .
+ r . . . . j .
+ j . . . . r .
+ r . . . . j .
+ r . . . . r j
+ j r r . j j j
+j joue
+entrer un coup j j en 0
+coup lu j en 0,0
+la machine joue r en 6,3
+ j . . . . r .
+ r . . . . j .
+ j . . . . r .
+ r . . . . j r
+ r . . . . r j
+ j r r . j j j
+j joue
+entrer un coup j j en 6
+coup lu j en 6,2
+la machine joue r en 4,4
+ j . . . . r .
+ r . . . . j .
+ j . . . . r j
+ r . . . . j r
+ r . . . r r j
+ j r r . j j j
+j joue
+entrer un coup j j en 6
+coup lu j en 6,1
+la machine joue r en 1,4
+ j . . . . r .
+ r . . . . j j
+ j . . . . r j
+ r . . . . j r
+ r r . . r r j
+ j r r . j j j
+j joue
+entrer un coup j j en 6
+coup lu j en 6,0
+la machine joue r en 2,4
+ j . . . . r j
+ r . . . . j j
+ j . . . . r j
+ r . . . . j r
+ r r r . r r j
+ j r r . j j j
+j joue
+entrer un coup j j en 4
+coup lu j en 4,3
+la machine joue r en 4,2
+ j . . . . r j
+ r . . . . j j
+ j . . . r r j
+ r . . . j j r
+ r r r . r r j
+ j r r . j j j
+j joue
+entrer un coup j j en 4
+coup lu j en 4,1
+la machine joue r en 4,0
+ j . . . r r j
+ r . . . j j j
+ j . . . r r j
+ r . . . j j r
+ r r r . r r j
+ j r r . j j j
+j joue
+entrer un coup j j en 1
+coup lu j en 1,3
+la machine joue r en 1,2
+ j . . . r r j
+ r . . . j j j
+ j r . . r r j
+ r j . . j j r
+ r r r . r r j
+ j r r . j j j
+j joue
+entrer un coup j j en 1
+coup lu j en 1,1
+la machine joue r en 1,0
+ j r . . r r j
+ r j . . j j j
+ j r . . r r j
+ r j . . j j r
+ r r r . r r j
+ j r r . j j j
+j joue
+entrer un coup j j en 2
+coup lu j en 2,3
+la machine joue r en 2,2
+ j r . . r r j
+ r j . . j j j
+ j r r . r r j
+ r j j . j j r
+ r r r . r r j
+ j r r . j j j
+j joue
+entrer un coup j j en 2
+coup lu j en 2,1
+la machine joue r en 2,0
+ j r r . r r j
+ r j j . j j j
+ j r r . r r j
+ r j j . j j r
+ r r r . r r j
+ j r r . j j j
+j joue
+entrer un coup j j en 3
+coup lu j en 3,5
+
+Le joueur Rouge gagne !
+
+
+
