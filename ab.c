@@ -14,6 +14,7 @@ int nexplore;
 static Grille *mygrille;
 int pMax= 4;
 
+
 int maxAB_profondeur(int alpha, int beta, int flag, int prof){
   Coup liste[MaxCoup];
   int nel;
