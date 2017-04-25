@@ -121,7 +121,7 @@ Un exemple sur un match nul : <br>
 * r r j j . . .
 * j j r r . . .
 * r r j j r j .
-* j j r j r j r
+* j j r j r j r <br>
 j joue<br>
 
 Match nul<br>
