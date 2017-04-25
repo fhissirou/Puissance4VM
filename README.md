@@ -64,11 +64,11 @@ Exemples de résultats attendus :
  r j j j r j r <br>
 r joue <br>
 
-Le joueur Jaune gagne !
-Résultat de l'exploration totale : 927 noeuds
-Ici le damier envoyé indiquait que rouge devait jouer mais minmax a trouvé que jaune avait une solution gagnante.
+Le joueur Jaune gagne !<br>
+Résultat de l'exploration totale : 927 noeuds<br>
+Ici le damier envoyé indiquait que rouge devait jouer mais minmax a trouvé que jaune avait une solution gagnante.<br>
 
-Pour le même damier : 
+Pour le même damier : <br>
 * ./play_alphabeta < damiers/damier1  <br>
  r . . j r . . <br>
  r . . j r j j <br>
@@ -78,8 +78,8 @@ Pour le même damier :
  r j j j r j r <br>
 r joue <br>
 
-Le joueur Jaune gagne !
-Résultat de l'exploration totale : 23 noeuds
+Le joueur Jaune gagne !<br>
+Résultat de l'exploration totale : 23 noeuds<br>
 Ici le damier envoyé indiquait que rouge devait jouer mais alphabeta a trouvé que jaune avait une solution gagnante. <br>
 
 
@@ -92,13 +92,13 @@ Ici le damier envoyé indiquait que rouge devait jouer mais alphabeta a trouvé 
  r j j j r j r <br>
 j joue <br>
 
-Le joueur Rouge gagne!
-Résultat de l'exploration totale : 10658 noeuds
+Le joueur Rouge gagne!<br>
+Résultat de l'exploration totale : 10658 noeuds<br>
 Ici le damier envoyé indiquait que jaune devait jouer mais alphabeta a trouvé que rouge avait une solution gagnante. <br>
 
 
 
-Une exploration énorme que minmax ne sait pas résoudre
+Une exploration énorme que minmax ne sait pas résoudre<br>
 * ./play_alphabeta < damiers/damier7 <br>
  . . . . . . j <br>
  . . . . . . r <br>
@@ -109,11 +109,11 @@ Une exploration énorme que minmax ne sait pas résoudre
 j joue <br>
 
 
-Le joueur Rouge gagne!
-Résultat de l'exploration totale : 11586708 noeuds
+Le joueur Rouge gagne!<br>
+Résultat de l'exploration totale : 11586708 noeuds<br>
 
 
-Un exemple sur un match nul : 
+Un exemple sur un match nul : <br>
 
 ./play_alphabeta < damiers/damier9<br>
 * r r . j . . .
@@ -124,12 +124,12 @@ Un exemple sur un match nul :
 * j j r j r j r
 j joue<br>
 
-Match nul
-Résultat de l'exploration totale : 3373 noeuds
+Match nul<br>
+Résultat de l'exploration totale : 3373 noeuds<br>
 
 
 
-Une simulation entre joueur parfait et mc
+Une simulation entre joueur parfait et mc<br>
 ./play_mc_vs_ab 200<br>
 * . . . . . . .
 * . . . . . . .
