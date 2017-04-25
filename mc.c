@@ -25,7 +25,6 @@ int playout(Grille * g){
 
 
 
-
 Coup MC(Grille * g, int nplayout){
   Coup liste[MaxCoup];
   int nel;
