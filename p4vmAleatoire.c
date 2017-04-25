@@ -35,10 +35,8 @@ int main(int k, char ** argv) {
       printf("entrer un coup ");
       line = xgetline(stdin);
 
-  
       c = lirecoup(&mygrille, line+1);
 
-      // la fonction cfini() ne fonctionne par correctement mais pour l'instant ca ne dérange pas trop la génération de coups
       if (c.ou == Rate){  
         printf("mauvais coup, recommencer\n");
         goto re;
@@ -57,12 +55,7 @@ int main(int k, char ** argv) {
     Gtmp = mygrille;
     nel = mkcoup(&Gtmp, liste);
 
-    // la liste des coups trouvés a été affichée : posiions sur la grille entre 0 et 41
-
     c = liste[rand() % nel];
-
-    // ici on peut accéder à la valeur avec cout << c.ou << endl ; 
- 
     printf("la machine joue %s\n", strcoup(&c));
     jouer(&mygrille, &c);
 
