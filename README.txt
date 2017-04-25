@@ -114,14 +114,14 @@ Résultat de l'exploration totale : 11586708 noeuds
 
 Un exemple sur un match nul : 
 
-./play_alphabeta < damiers/damier9<br>
+./play_alphabeta < damiers/damier9
 * r r . j . . .
 * j j r r . . .
 * r r j j . . .
 * j j r r . . .
 * r r j j r j .
 * j j r j r j r
-j joue<br>
+j joue
 
 Match nul
 Résultat de l'exploration totale : 3373 noeuds
