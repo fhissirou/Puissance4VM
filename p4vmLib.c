@@ -9,6 +9,7 @@
 #include "p4vm.h"
 
 
+
 char * strgrille(Grille * g){
   int l, c;
   static char str[MaxStrGrille];
@@ -317,10 +318,7 @@ Coup coupAleatoire(Grille *g){
   int n;
   int val;
   Coup c;
-
   n = mkcoup(g, liste);
-
-  // la liste des coups trouvés a été affichée : posiions sur la grille entre 0 et 41
   val = rand()%n;
   printf("valleur %d et le n= %d\n", val, n);
   c = liste[val];
