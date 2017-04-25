@@ -6,7 +6,7 @@
  * Permet de jouer contre un joueur parfait
  * On lance programme avec 
  * make
- * ./playHvsM
+ * ./play_HvsM
  * Exemples de coups : 
  * j j en 0
  * j j en 6
@@ -29,17 +29,14 @@ int main(int k, char ** argv) {
       /* faire jouer l'humain */
       printf("entrer un coup ");
       line = xgetline(stdin);
-
   
       c = lirecoup(&grille, line+1);
 
-      // la fonction cfini() ne fonctionne par correctement mais pour l'instant ca ne dérange pas trop la génération de coups
       if (c.ou == Rate){  
         printf("mauvais coup, recommencer\n");
         goto re;
       }
 
-    // les coups sont bien lu et jouer
     printf("coup lu %s\n", strcoup(&c));  
     jouer(&grille, &c);
     printf("%s", strgrille(&grille));
