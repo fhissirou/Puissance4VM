@@ -130,7 +130,7 @@ Résultat de l'exploration totale : 3373 noeuds
 
 
 Une simulation entre joueur parfait et mc
-* ./play_mc_vs_ab 200<br>
+./play_mc_vs_ab 200<br>
 * . . . . . . .
 * . . . . . . .
 * . . . . . . .
@@ -139,4 +139,202 @@ Une simulation entre joueur parfait et mc
 * . . . . . . .
 j joue<br>
 200 playouts: score -108<br>
+
+
+
+Un exemple de déroulement de jeu contre mc ( le principe est le même avec ./play_aleatoire et ./play_HvsM, il n'y a que la stratégie de jeu de l'ordinateur qui change)<br>
+
+* ./play_mc 100
+* . . . . . . .
+* . . . . . . .
+* . . . . . . .
+* . . . . . . .
+* . . . . . . .
+* . . . . . . .
+j joue<br>
+entrer un coup j j en 0<br>
+coup lu j en 0,5<br>
+la machine joue r en 2,5<br>
+* . . . . . . .
+* . . . . . . .
+* . . . . . . .
+* . . . . . . .
+* . . . . . . .
+* j . r . . . .
+j joue<br>
+entrer un coup j j en 6<br>
+coup lu j en 6,5<br>
+la machine joue r en 1,5<br>
+* . . . . . . .
+* . . . . . . .
+* . . . . . . .
+* . . . . . . .
+* . . . . . . .
+* j r r . . . j
+j joue<br>
+entrer un coup j j en 5<br>
+coup lu j en 5,5<br>
+la machine joue r en 0,4<br>
+* . . . . . . .
+* . . . . . . .
+* . . . . . . .
+* . . . . . . .
+* r . . . . . .
+* j r r . . j j
+j joue<br>
+entrer un coup j j en 4<br>
+coup lu j en 4,5<br>
+la machine joue r en 0,3<br>
+* . . . . . . .
+* . . . . . . .
+* . . . . . . .
+* r . . . . . .
+* r . . . . . .
+* j r r . j j j
+j joue<br>
+entrer un coup j j en 6<br>
+coup lu j en 6,4<br>
+la machine joue r en 5,4<br>
+* . . . . . . .
+* . . . . . . .
+* . . . . . . .
+* r . . . . . .
+* r . . . . r j
+* j r r . j j j
+j joue<br>
+entrer un coup j j en 5<br>
+coup lu j en 5,3<br>
+la machine joue r en 5,2<br>
+* . . . . . . .
+* . . . . . . .
+* . . . . . r .
+* r . . . . j .
+* r . . . . r j
+* j r r . j j j
+j joue<br>
+entrer un coup j j en 5<br>
+coup lu j en 5,1<br>
+la machine joue r en 5,0<br>
+* . . . . . r .
+* . . . . . j .
+* . . . . . r .
+* r . . . . j .
+* r . . . . r j
+* j r r . j j j
+j joue<br>
+entrer un coup j j en 0<br>
+coup lu j en 0,2<br>
+la machine joue r en 0,1<br>
+* . . . . . r .
+* r . . . . j .
+* j . . . . r .
+* r . . . . j .
+* r . . . . r j
+* j r r . j j j
+j joue<br>
+entrer un coup j j en 0<br>
+coup lu j en 0,0<br>
+la machine joue r en 6,3<br>
+* j . . . . r .
+* r . . . . j .
+* j . . . . r .
+* r . . . . j r
+* r . . . . r j
+* j r r . j j j
+j joue<br>
+entrer un coup j j en 6<br>
+coup lu j en 6,2<br>
+la machine joue r en 4,4<br>
+* j . . . . r .
+* r . . . . j .
+* j . . . . r j
+* r . . . . j r
+* r . . . r r j
+* j r r . j j j
+j joue<br>
+entrer un coup j j en 6<br>
+coup lu j en 6,1<br>
+la machine joue r en 1,4<br>
+* j . . . . r .
+* r . . . . j j
+* j . . . . r j
+* r . . . . j r
+* r r . . r r j
+* j r r . j j j
+j joue<br>
+entrer un coup j j en 6<br>
+coup lu j en 6,0<br>
+la machine joue r en 2,4<br>
+* j . . . . r j
+* r . . . . j j
+* j . . . . r j
+* r . . . . j r
+* r r r . r r j
+* j r r . j j j
+j joue<br>
+entrer un coup j j en 4<br>
+coup lu j en 4,3<br>
+la machine joue r en 4,2<br>
+* j . . . . r j
+* r . . . . j j
+* j . . . r r j
+* r . . . j j r
+* r r r . r r j
+* j r r . j j j
+j joue<br>
+entrer un coup j j en 4<br>
+coup lu j en 4,1<br>
+la machine joue r en 4,0<br>
+* j . . . r r j
+* r . . . j j j
+* j . . . r r j
+* r . . . j j r
+* r r r . r r j
+* j r r . j j j
+j joue<br>
+entrer un coup j j en 1<br>
+coup lu j en 1,3<br>
+la machine joue r en 1,2<br>
+* j . . . r r j
+* r . . . j j j
+* j r . . r r j
+* r j . . j j r
+* r r r . r r j
+* j r r . j j j
+j joue<br>
+entrer un coup j j en 1<br>
+coup lu j en 1,1<br>
+la machine joue r en 1,0<br>
+* j r . . r r j
+* r j . . j j j
+* j r . . r r j
+* r j . . j j r
+* r r r . r r j
+* j r r . j j j
+j joue<br>
+entrer un coup j j en 2<br>
+coup lu j en 2,3<br>
+la machine joue r en 2,2<br>
+* j r . . r r j
+* r j . . j j j
+* j r r . r r j
+* r j j . j j r
+* r r r . r r j
+* j r r . j j j
+j joue<br>
+entrer un coup j j en 2<br>
+coup lu j en 2,1<br>
+la machine joue r en 2,0<br>
+* j r r . r r j
+* r j j . j j j
+* j r r . r r j
+* r j j . j j r
+* r r r . r r j
+* j r r . j j j
+j joue <br>
+entrer un coup j j en 3 <br>
+coup lu j en 3,5 <br>
+
+Le joueur Rouge gagne !  <br>
+
 
